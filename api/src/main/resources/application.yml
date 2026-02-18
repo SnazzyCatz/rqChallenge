@@ -1,2 +1,18 @@
-spring.application.name: employee-api
-server.port: 8111
+spring:
+  application:
+    name: employee-api
+
+server:
+  port: 8111
+
+mock:
+  api:
+    base-url: http://localhost:8112/api/v1/employee
+    retry:
+      max-attempts: 3
+      initial-delay-ms: 2000
+      multiplier: 2
+
+logging:
+  level:
+    com.reliaquest.api: INFO
